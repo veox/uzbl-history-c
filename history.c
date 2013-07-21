@@ -19,7 +19,7 @@ int main (int argc, char **argv) {
     tmp = localtime(&t);
     strftime(s, sizeof(s), "%Y-%m-%d %H:%M:%S", tmp);
 
-    while (!( f = fopen("/home/cy/.local/share/uzbl/history", "a") ))
+    while (!( f = fopen("/home/FIXME/.local/share/uzbl/history", "a") ))
 	sleep(1);
     fprintf(f, "%s %s %s\n", s, getenv("UZBL_URI"), getenv("UZBL_TITLE"));
     fclose(f);
