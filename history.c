@@ -21,6 +21,7 @@ int main (int argc, char **argv) {
 
     while (!( f = fopen("/home/FIXME/.local/share/uzbl/history", "a") ))
 	sleep(1);
+    // FIXME: might be a good idea to check envvars before printing to file
     fprintf(f, "%s %s %s\n", s, getenv("UZBL_URI"), getenv("UZBL_TITLE"));
     fclose(f);
 
